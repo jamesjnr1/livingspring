@@ -349,3 +349,18 @@ h4 { font-size: 16px; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Transparent hero header — light text */
+.brand, .brand-accent, .nav-link { transition: color .3s var(--ease); }
+.hamburger span { transition: background .3s var(--ease); }
+
+.site-header:not(.solid):not(.always-solid) .brand,
+.site-header:not(.solid):not(.always-solid) .nav-link {
+  color: #ffffff;
+}
+.site-header:not(.solid):not(.always-solid) .brand-accent {
+  color: #a7d4bd;
+}
+.site-header:not(.solid):not(.always-solid) .hamburger span {
+  background: #ffffff;
+}
