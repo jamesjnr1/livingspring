@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book — LivingSpring Apartments</title>
+  <meta name="description" content="Send an enquiry to stay at LivingSpring Apartments in Sunyani.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' font-family='Poppins,sans-serif' font-weight='700' fill='%232d6a4f'%3EL%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="site-header always-solid">
+  <div class="container">
+    <a class="brand" href="index.html">Living<span class="brand-accent">Spring</span></a>
+    <nav class="nav-primary">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+      <a href="index.html#about" class="nav-link">About</a>
+      <a href="book.html" class="btn btn-primary">Book a stay</a>
+    </nav>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu">
+  <button class="close" aria-label="Close">×</button>
+  <a href="index.html">Home</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="index.html#about">About</a>
+  <a href="book.html">Book a stay</a>
+</div>
+
+<main class="page-header">
+  <div class="container">
+    <p class="eyebrow">ENQUIRE</p>
+    <h1>Plan your stay.</h1>
+    <p class="lead">Tell us when you'd like to visit and we'll come back with availability and rates. Usually a reply within a day.</p>
+  </div>
+</main>
+
+<section class="section" style="padding-top: 20px;">
+  <div class="container">
+    <div class="book-grid">
+
+      <!-- Form -->
+      <form class="book-form" id="enquiry-form" novalidate>
+        <div class="field">
+          <label>Your full name</label>
+          <input type="text" name="name" required placeholder="Jane Adjei">
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label>Email</label>
+            <input type="email" name="email" required placeholder="jane@example.com">
+          </div>
+          <div class="field">
+            <label>Phone / WhatsApp</label>
+            <input type="tel" name="phone" placeholder="+233 …">
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label>Check-in</label>
+            <input type="date" name="checkIn" required>
+          </div>
+          <div class="field">
+            <label>Check-out</label>
+            <input type="date" name="checkOut" required>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label>Guests</label>
+            <select name="guests">
+              <option value="1">1 guest</option>
+              <option value="2" selected>2 guests</option>
+              <option value="3">3 guests</option>
+              <option value="4">4 guests</option>
+              <option value="5">5+ guests</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Which apartment?</label>
+            <select name="apartment">
+              <option value="either">Either / no preference</option>
+              <option value="a">Apartment A</option>
+              <option value="b">Apartment B</option>
+              <option value="both">Both (for a group)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Anything we should know?</label>
+          <textarea name="message" rows="4" placeholder="Visit purpose, arrival time, special requests…"></textarea>
+        </div>
+
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Send enquiry</button>
+        <p class="fine-print">By sending this enquiry, you'll receive a reply at the email above. We don't share your details.</p>
+      </form>
+
+      <!-- Sidebar info -->
+      <aside class="book-side">
+        <div class="side-card">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="LivingSpring">
+          <div class="side-body">
+            <h3>LivingSpring Apartments</h3>
+            <p class="text-muted small">Sunyani, Bono Region · Ghana</p>
+            <div class="divider"></div>
+
+            <ul class="side-list">
+              <li>
+                <strong>Two apartments</strong>
+                <span>Each fully self-contained</span>
+              </li>
+              <li>
+                <strong>Sleeps up to 4</strong>
+                <span>Per apartment</span>
+              </li>
+              <li>
+                <strong>Central Sunyani</strong>
+                <span>Minutes from market &amp; cafés</span>
+              </li>
+              <li>
+                <strong>Long stays welcome</strong>
+                <span>Weekly &amp; monthly rates on request</span>
+              </li>
+            </ul>
+
+            <div class="divider"></div>
+            <h4 class="mt-2">Prefer to chat?</h4>
+            <a class="contact-line" href="mailto:hello@livingspring.gh">
+              <span class="ci">✉</span> hello@livingspring.gh
+            </a>
+            <a class="contact-line" href="tel:+233000000000">
+              <span class="ci">☎</span> +233 00 000 0000
+            </a>
+            <a class="contact-line" href="#">
+              <span class="ci">◉</span> WhatsApp
+            </a>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- Success screen (hidden until submit) -->
+<div class="modal" id="success-modal" aria-hidden="true">
+  <div class="modal-card">
+    <div class="check-mark">✓</div>
+    <h2>Enquiry sent.</h2>
+    <p>Thanks — we'll be in touch shortly to confirm availability and share rates.</p>
+    <a class="btn btn-outline" href="index.html">Back to home</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html">Living<span class="brand-accent">Spring</span></a>
+        <p class="footer-tag">A quiet stay in Sunyani, Ghana.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Visit</h5>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="index.html#about">About</a>
+        <a href="book.html">Book</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <a href="mailto:hello@livingspring.gh">hello@livingspring.gh</a>
+        <a href="tel:+233000000000">+233 00 000 0000</a>
+        <a href="#">WhatsApp us</a>
+      </div>
+      <div class="footer-col">
+        <h5>Find us</h5>
+        <p class="footer-address">Sunyani<br>Bono Region<br>Ghana</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; <span id="year">2026</span> LivingSpring Apartments</div>
+      <div>Built with care in Ghana</div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
